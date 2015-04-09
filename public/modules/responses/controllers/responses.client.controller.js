@@ -9,7 +9,14 @@ angular.module('responses').controller('ResponsesController', ['$scope', '$state
 		$scope.create = function() {
 			// Create new Response object
 			var response = new Responses ({
-				name: this.name
+				question1 : this.question1,
+                response1 : this.response1,
+                question2 : this.question2,
+                response2 : this.response2,
+                question3 : this.question3,
+                response3 : this.response3,
+                question4 : this.question4,
+                response4 : this.response4
 			});
 
 			// Redirect after save
