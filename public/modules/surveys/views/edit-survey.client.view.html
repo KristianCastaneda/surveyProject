@@ -1,0 +1,60 @@
+<section data-ng-controller="SurveysController" data-ng-init="findOne()">
+    <div class="page-header">
+        <h1>Edit Survey</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="update()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="title">Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="survey.title" id="title" class="form-control" placeholder="Name" required>
+                    </div>
+                    <label class="control-label" for="desc">Description</label>
+                    <input type="text" data-ng-model="survey.desc" id="desc" class="form-control" placeholder="Description" required>
+                    <label class="control-label" for="expiryDate">Expiry Date</label>
+                    <input type="date" data-ng-model="survey.expiryDate" id="expiryDate" class="form-control"required>
+                    <label class="control-label" for="questions">Question 1</label>
+                    <textarea type="text" data-ng-model="survey.question1" id="question1" class="form-control" required></textarea>
+                    <div class="radio">
+                        <input type="radio" name="answers"><input type="text" data-ng-model="survey.answers1a"><br/>
+                        <input type="radio" name="answers"><input type="text" data-ng-model="survey.answers1b"><br/>
+                        <input type="radio" name="answers"><input type="text" data-ng-model="survey.answers1c"><br/>
+                        <input type="radio" name="answers"><input type="text" data-ng-model="survey.answers1d">
+                    </div>
+                    <label class="control-label" for="questions">Question 2</label>
+                    <textarea type="text" data-ng-model="survey.question2" id="question2" class="form-control" required></textarea>
+                    <div class="radio">
+                        <input type="radio" name="answers2"><input type="text" data-ng-model="survey.answers2a"><br/>
+                        <input type="radio" name="answers2"><input type="text" data-ng-model="survey.answers2b"><br/>
+                        <input type="radio" name="answers2"><input type="text" data-ng-model="survey.answers2c"><br/>
+                        <input type="radio" name="answers2"><input type="text" data-ng-model="survey.answers2d">
+                    </div>
+                    <label class="control-label" for="questions">Question 3</label>
+                    <textarea type="text" data-ng-model="survey.question3" id="question3" class="form-control" required></textarea>
+                    <div class="radio">
+                        <input type="radio" name="answers3"><input type="text" data-ng-model="survey.answers3a"><br/>
+                        <input type="radio" name="answers3"><input type="text" data-ng-model="survey.answers3b"><br/>
+                        <input type="radio" name="answers3"><input type="text" data-ng-model="survey.answers3c"><br/>
+                        <input type="radio" name="answers3"><input type="text" data-ng-model="survey.answers3d">
+                    </div>
+                    <label class="control-label" for="questions">Question 4</label>
+                    <textarea type="text" data-ng-model="survey.question4" id="question4" class="form-control" required></textarea>
+                    <div class="radio">
+                        <input type="radio" name="answers4"><input type="text" data-ng-model="survey.answers4a"><br/>
+                        <input type="radio" name="answers4"><input type="text" data-ng-model="survey.answers4b"><br/>
+                        <input type="radio" name="answers4"><input type="text" data-ng-model="survey.answers4c"><br/>
+                        <input type="radio" name="answers4"><input type="text" data-ng-model="survey.answers4d">
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

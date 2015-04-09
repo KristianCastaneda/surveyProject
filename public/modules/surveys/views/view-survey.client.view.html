@@ -1,0 +1,55 @@
+<section data-ng-controller="SurveysController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="survey.title"></h1>
+	</div>
+    <div>
+		<h3 data-ng-bind="survey.desc"></h3>
+	</div>
+    <div>
+		<h3 data-ng-bind="survey.question1"></h3>
+	</div>
+    <label data-ng-bind="survey.question1" id="question1" class="form-control" required></label>
+    <div class="radio">
+        <input type="radio" name="answers"><label data-ng-bind="survey.answers1a"></label><br/>
+        <input type="radio" name="answers"><label data-ng-bind="survey.answers1b"></label><br/>
+        <input type="radio" name="answers"><label data-ng-bind="survey.answers1c"></label><br/>
+        <input type="radio" name="answers"><label data-ng-bind="survey.answers1d"></label>
+    </div>
+    <label data-ng-bind="survey.question2" id="question2" class="form-control" required></label>
+    <div class="radio">
+        <input type="radio" name="answers2"><label data-ng-bind="survey.answers2a"></label><br/>
+        <input type="radio" name="answers2"><label data-ng-bind="survey.answers2b"></label><br/>
+        <input type="radio" name="answers2"><label data-ng-bind="survey.answers2c"></label><br/>
+        <input type="radio" name="answers2"><label data-ng-bind="survey.answers2d"></label>
+    </div>
+    <label data-ng-bind="survey.question3" id="question3" class="form-control" required></label>
+    <div class="radio">
+        <input type="radio" name="answers3"><label data-ng-bind="survey.answers3a"></label><br/>
+        <input type="radio" name="answers3"><label data-ng-bind="survey.answers3b"></label><br/>
+        <input type="radio" name="answers3"><label data-ng-bind="survey.answers3c"></label><br/>
+        <input type="radio" name="answers3"><label data-ng-bind="survey.answers3d"></label>
+    </div>
+    <label data-ng-bind="survey.question4" id="question4" class="form-control" required></label>
+    <div class="radio">
+        <input type="radio" name="answers4"><label data-ng-bind="survey.answers4a"></label><br/>
+        <input type="radio" name="answers4"><label data-ng-bind="survey.answers4b"></label><br/>
+        <input type="radio" name="answers4"><label data-ng-bind="survey.answers4c"></label><br/>
+        <input type="radio" name="answers4"><label data-ng-bind="survey.answers4d"></label>
+    </div>
+	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == survey.user._id))">
+		<a class="btn btn-primary" href="/#!/surveys/{{survey._id}}/edit">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+	<small>
+		<em class="text-muted">
+			Posted on
+			<span data-ng-bind="survey.created | date:'mediumDate'"></span>
+			by
+			<span data-ng-bind="survey.user.displayName"></span>
+		</em>
+	</small>
+</section>
