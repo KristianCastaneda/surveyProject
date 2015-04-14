@@ -13,30 +13,12 @@ angular.module('surveys').controller('SurveysController', ['$scope', '$statePara
                 desc: this.desc,
                 expiryDate: this.expiryDate,
                 question1: this.question1,
-                answers1a:this.answers1a,answers1b:this.answers1b,answers1c:this.answers1c,answers1d:this.answers1d,
-                question2: this.question2,
-                answers2a:this.answers2a,answers2b:this.answers2b,answers2c:this.answers2c,answers2d:this.answers2d,
-                question3: this.question3,
-                answers3a:this.answers3a,answers3b:this.answers3b,answers3c:this.answers3c,answers3d:this.answers3d,
-                question4: this.question4,
-                answers4a:this.answers4a,answers4b:this.answers4b,answers4c:this.answers4c,answers4d:this.answers4d,
-                question5: this.question5,
-                answers5a:this.answers5a,answers5b:this.answers5b,answers5c:this.answers5c,answers5d:this.answers5d,
-                question6: this.question6,
-                answers6a:this.answers6a,answers6b:this.answers6b,answers6c:this.answers6c,answers6d:this.answers6d,
-                question7: this.question7,
-                answers7a:this.answers7a,answers7b:this.answers7b,answers7c:this.answers7c,answers7d:this.answers7d,
-                question8: this.question8,
-                answers8a:this.answers8a,answers8b:this.answers8b,answers8c:this.answers8c,answers8d:this.answers8d,
-                question9: this.question9,
-                answers9a:this.answers9a,answers9b:this.answers9b,answers9c:this.answers9c,answers9d:this.answers9d,
-                question10: this.question10,
-                answers10a:this.answers10a,answers10b:this.answers10b,answers10c:this.answers10c,answers10d:this.answers10d
+                answers1a:this.answers1a,answers1b:this.answers1b,answers1c:this.answers1c,answers1d:this.answers1d
 			});
-            
+
 			// Redirect after save
 			survey.$save(function(response) {
-				$location.path('surveys/' + response._id);
+				$location.path('surveys');// /'+ response._id);
 
 				// Clear form fields
 				$scope.name = '';
@@ -44,6 +26,7 @@ angular.module('surveys').controller('SurveysController', ['$scope', '$statePara
 				$scope.error = errorResponse.data.message;
 			});
 		};
+		
 
 		// Remove existing Survey
 		$scope.remove = function(survey) {

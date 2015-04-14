@@ -9,17 +9,13 @@ angular.module('responses').config(['$stateProvider',
 			url: '/responses',
 			templateUrl: 'modules/responses/views/list-responses.client.view.html'
 		}).
-		state('createResponse', {
-			url: '/responses/create',
-			templateUrl: 'modules/responses/views/create-response.client.view.html'
-		}).
-		state('viewResponse', {
-			url: '/responses/:responseId',
+		state('viewResponses', {
+			url: '/responses/view',
 			templateUrl: 'modules/responses/views/view-response.client.view.html'
 		}).
-		state('editResponse', {
-			url: '/responses/:responseId/edit',
-			templateUrl: 'modules/responses/views/edit-response.client.view.html'
+		state('takeSurvey', {
+			url: '/responses/:surveyId',
+			templateUrl: 'modules/responses/views/take-response.client.view.html'
 		});
 	}
 ]);

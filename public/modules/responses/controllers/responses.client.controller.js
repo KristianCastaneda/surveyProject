@@ -1,27 +1,23 @@
 'use strict';
 
 // Responses controller
-angular.module('responses').controller('ResponsesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Responses',
-	function($scope, $stateParams, $location, Authentication, Responses) {
+angular.module('responses').controller('ResponsesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Responses', 'Surveys',
+	function($scope, $stateParams, $location, Authentication, Responses, Surveys) {
 		$scope.authentication = Authentication;
 
 		// Create new Response
 		$scope.create = function() {
 			// Create new Response object
 			var response = new Responses ({
-				question1 : this.question1,
-                response1 : this.response1,
-                question2 : this.question2,
-                response2 : this.response2,
-                question3 : this.question3,
-                response3 : this.response3,
-                question4 : this.question4,
-                response4 : this.response4
+				surveyID: this.surveyId,
+				question1: this.question1,
+				answers: this.answer,
+				name: this.name
 			});
 
 			// Redirect after save
 			response.$save(function(response) {
-				$location.path('responses/' + response._id);
+				$location.path('responses/view');
 
 				// Clear form fields
 				$scope.name = '';
@@ -58,15 +54,17 @@ angular.module('responses').controller('ResponsesController', ['$scope', '$state
 			});
 		};
 
-		// Find a list of Responses
-		$scope.find = function() {
-			$scope.responses = Responses.query();
-		};
 
-		// Find existing Response
+	// Find a list of Surveys
+		$scope.find = function() {
+			$scope.surveys = Surveys.query();
+		};
+		
+		
+		// Find existing Survey
 		$scope.findOne = function() {
-			$scope.response = Responses.get({ 
-				responseId: $stateParams.responseId
+			$scope.survey = Surveys.get({ 
+				surveyId: $stateParams.surveyId
 			});
 		};
 	}

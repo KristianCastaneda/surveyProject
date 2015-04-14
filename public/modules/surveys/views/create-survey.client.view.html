@@ -6,93 +6,17 @@
         <form class="form-horizontal" data-ng-submit="create()" novalidate>
             <fieldset>
                 <div class="form-group">
-                    <label class="control-label" for="title">Title</label>
+                    <label class="control-label" for="title"><strong>Title</strong></label>
                     <div class="controls">
                         <input type="text" data-ng-model="title" id="title" class="form-control" required>
                     </div>
-                    <label class="control-label" for="desc">Description</label>
-                    <input type="text" data-ng-model="desc" id="desc" class="form-control" required>
-                    <label class="control-label" for="expiryDate">Expiration:</label>
-                    <input type="date" data-ng-model="expiryDate" id="expiryDate" class="form-control"required>
                     <label class="control-label" for="questions">Question 1</label>
-                    <textarea type="text" data-ng-model="question1" id="question2" class="form-control" required></textarea>
+                    <textarea type="text" data-ng-model="question1" id="question1" class="form-control" required></textarea>
                     <div class="radio">
-                        <input type="radio" name="answers"><input type="text" data-ng-model="answers1a"><br/>
-                        <input type="radio" name="answers"><input type="text" data-ng-model="answers1b"><br/>
-                        <input type="radio" name="answers"><input type="text" data-ng-model="answers1c"><br/>
-                        <input type="radio" name="answers"><input type="text" data-ng-model="answers1d">
-                    </div>
-                    <label class="control-label" for="questions">Question 2</label>
-                    <textarea type="text" data-ng-model="question2" id="question2" class="form-control" required></textarea>
-                    <div class="radio">
-                        <input type="radio" name="answers2"><input type="text" data-ng-model="answers2a"><br/>
-                        <input type="radio" name="answers2"><input type="text" data-ng-model="answers2b"><br/>
-                        <input type="radio" name="answers2"><input type="text" data-ng-model="answers2c"><br/>
-                        <input type="radio" name="answers2"><input type="text" data-ng-model="answers2d">
-                    </div>
-                    <label class="control-label" for="questions">Question 3</label>
-                    <textarea type="text" data-ng-model="question3" id="question3" class="form-control" required></textarea>
-                    <div class="radio">
-                        <input type="radio" name="answers3"><input type="text" data-ng-model="answers3a"><br/>
-                        <input type="radio" name="answers3"><input type="text" data-ng-model="answers3b"><br/>
-                        <input type="radio" name="answers3"><input type="text" data-ng-model="answers3c"><br/>
-                        <input type="radio" name="answers3"><input type="text" data-ng-model="answers3d">
-                    </div>
-                    <label class="control-label" for="questions">Question 4</label>
-                    <textarea type="text" data-ng-model="question4" id="question4" class="form-control" required></textarea>
-                    <div class="radio">
-                        <input type="radio" name="answers4"><input type="text" data-ng-model="answers4a"><br/>
-                        <input type="radio" name="answers4"><input type="text" data-ng-model="answers4b"><br/>
-                        <input type="radio" name="answers4"><input type="text" data-ng-model="answers4c"><br/>
-                        <input type="radio" name="answers4"><input type="text" data-ng-model="answers4d">
-                    </div>
-                    <label class="control-label" for="questions">Question 5</label>
-                    <textarea type="text" data-ng-model="question5" id="question5" class="form-control" required></textarea>
-                    <div class="radio">
-                        <input type="radio" name="answers5"><input type="text" data-ng-model="answers5a"><br/>
-                        <input type="radio" name="answers5"><input type="text" data-ng-model="answers5b"><br/>
-                        <input type="radio" name="answers5"><input type="text" data-ng-model="answers5c"><br/>
-                        <input type="radio" name="answers5"><input type="text" data-ng-model="answers5d">
-                    </div>
-                    <label class="control-label" for="questions">Question 6</label>
-                    <textarea type="text" data-ng-model="question6" id="question6" class="form-control" required></textarea>
-                    <div class="radio">
-                        <input type="radio" name="answers6"><input type="text" data-ng-model="answers6a"><br/>
-                        <input type="radio" name="answers6"><input type="text" data-ng-model="answers6b"><br/>
-                        <input type="radio" name="answers6"><input type="text" data-ng-model="answers6c"><br/>
-                        <input type="radio" name="answers6"><input type="text" data-ng-model="answers6d">
-                    </div>
-                    <label class="control-label" for="questions">Question 7</label>
-                    <textarea type="text" data-ng-model="question7" id="question7" class="form-control" required></textarea>
-                    <div class="radio">
-                        <input type="radio" name="answers7"><input type="text" data-ng-model="answers7a"><br/>
-                        <input type="radio" name="answers7"><input type="text" data-ng-model="answers7b"><br/>
-                        <input type="radio" name="answers7"><input type="text" data-ng-model="answers7c"><br/>
-                        <input type="radio" name="answers7"><input type="text" data-ng-model="answers7d">
-                    </div>
-                    <label class="control-label" for="questions">Question 8</label>
-                    <textarea type="text" data-ng-model="question8" id="question8" class="form-control" required></textarea>
-                    <div class="radio">
-                        <input type="radio" name="answers8"><input type="text" data-ng-model="answers8a"><br/>
-                        <input type="radio" name="answers8"><input type="text" data-ng-model="answers8b"><br/>
-                        <input type="radio" name="answers8"><input type="text" data-ng-model="answers8c"><br/>
-                        <input type="radio" name="answers8"><input type="text" data-ng-model="answers8d">
-                    </div>
-                    <label class="control-label" for="questions">Question 9</label>
-                    <textarea type="text" data-ng-model="question9" id="question9" class="form-control" required></textarea>
-                    <div class="radio">
-                        <input type="radio" name="answers9"><input type="text" data-ng-model="answers9a"><br/>
-                        <input type="radio" name="answers9"><input type="text" data-ng-model="answers9b"><br/>
-                        <input type="radio" name="answers9"><input type="text" data-ng-model="answers9c"><br/>
-                        <input type="radio" name="answers9"><input type="text" data-ng-model="answers9d">
-                    </div>
-                    <label class="control-label" for="questions">Question 10</label>
-                    <textarea type="text" data-ng-model="question10" id="question10" class="form-control" required></textarea>
-                    <div class="radio">
-                        <input type="radio" name="answers10"><input type="text" data-ng-model="answers10a"><br/>
-                        <input type="radio" name="answers10"><input type="text" data-ng-model="answers10b"><br/>
-                        <input type="radio" name="answers10"><input type="text" data-ng-model="answers10c"><br/>
-                        <input type="radio" name="answers10"><input type="text" data-ng-model="answers10d">
+                        <input type="radio" disabled name="answers"><input type="text" data-ng-model="answers1a"><br/>
+                        <input type="radio" disabled name="answers"><input type="text" data-ng-model="answers1b"><br/>
+                        <input type="radio" disabled name="answers"><input type="text" data-ng-model="answers1c"><br/>
+                        <input type="radio" disabled name="answers"><input type="text" data-ng-model="answers1d">
                     </div>
                 </div>
                 

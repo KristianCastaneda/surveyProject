@@ -10,14 +10,13 @@ var mongoose = require('mongoose'),
  * Response Schema
  */
 var ResponseSchema = new Schema({
+    title: String,
 	question1: String,
-    response1:String,
-    question2:String,
-    response2:String,
-    question3:String,
-    response3:String,
-    question4:String,
-    response4:String,
+    answers: String,
+    surveyID:  {
+		type: Schema.ObjectId,
+		ref: 'Survey'
+    },
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'

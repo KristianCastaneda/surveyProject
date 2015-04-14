@@ -1,9 +1,11 @@
-<section data-ng-controller="SurveysController" data-ng-init="find()">
+<section data-ng-controller="SurveysController" data-ng-init="find()" >
     <div class="page-header">
         <h1>Surveys</h1>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="survey in surveys" data-ng-href="#!/surveys/{{survey._id}}" class="list-group-item">
+        		<p data-ng-hide="(surveys.length !== 0)">You do not have any surveys yet.</p>
+		
+        <a data-ng-repeat="survey in surveys" data-ng-href="#!/surveys/{{survey._id}}" class="list-group-item" data-ng-show="((authentication.user) && (authentication.user._id == survey.user._id))">
 			<small class="list-group-item-text">
 				Posted on
 				<span data-ng-bind="survey.created | date:'medium'"></span>
@@ -11,7 +13,6 @@
 				<span data-ng-bind="survey.user.displayName"></span>
 			</small>
 			<h4 class="list-group-item-heading" data-ng-bind="survey.title"></h4>
-            <h3 data-ng-bind="survey.desc"></h3>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!surveys.$resolved || surveys.length">

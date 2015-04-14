@@ -6,6 +6,7 @@
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors.server.controller'),
 	Response = mongoose.model('Response'),
+	Survey = mongoose.model('Survey'),
 	_ = require('lodash');
 
 /**
@@ -14,6 +15,7 @@ var mongoose = require('mongoose'),
 exports.create = function(req, res) {
 	var response = new Response(req.body);
 	response.user = req.user;
+	response.survey = req.survey;
 
 	response.save(function(err) {
 		if (err) {
@@ -30,7 +32,7 @@ exports.create = function(req, res) {
  * Show the current Response
  */
 exports.read = function(req, res) {
-	res.jsonp(req.response);
+	res.jsonp(req.survey);
 };
 
 /**
@@ -69,9 +71,25 @@ exports.delete = function(req, res) {
 	});
 };
 
+
+/**
+ * List of Surveys
+ */
+exports.list = function(req, res) { 
+	Survey.find().sort('-created').populate('user', 'displayName').exec(function(err, surveys) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.jsonp(surveys);
+		}
+	});
+};
+
 /**
  * List of Responses
- */
+
 exports.list = function(req, res) { 
 	Response.find().sort('-created').populate('user', 'displayName').exec(function(err, responses) {
 		if (err) {
@@ -83,20 +101,24 @@ exports.list = function(req, res) {
 		}
 	});
 };
-
+ */
+ 
+ 
 /**
  * Response middleware
  */
-exports.responseByID = function(req, res, next, id) { 
-	Response.findById(id).populate('user', 'displayName').exec(function(err, response) {
+ 
+exports.surveyByID = function(req, res, next, id) { 
+	Survey.findById(id).populate('user', 'displayName').exec(function(err, survey) {
 		if (err) return next(err);
-		if (! response) return next(new Error('Failed to load Response ' + id));
-		req.response = response ;
+		if (! survey) return next(new Error('Failed to load Survey ' + id));
+		req.survey = survey ;
 		next();
 	});
 };
 
-/**
+/*
+ * *
  * Response authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
