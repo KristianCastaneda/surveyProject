@@ -10,13 +10,9 @@ var mongoose = require('mongoose'),
  * Response Schema
  */
 var ResponseSchema = new Schema({
-    title: String,
 	question1: String,
     answers: String,
-    surveyID:  {
-		type: Schema.ObjectId,
-		ref: 'Survey'
-    },
+    surveyID:  String,
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'

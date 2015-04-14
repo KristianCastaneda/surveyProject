@@ -2,20 +2,20 @@
    	<div class="page-header">
 		<h1 data-ng-bind="survey.title"></h1>
 	</div>
-	<p>LILIYA's response view</p>
 	<div class="col-md-12">
-		<form name="answersForm" class="form-horizontal"  data-ng-href="#!/responses/view" >
+		<form name="answersForm" class="form-horizontal"  data-ng-submit="create()" > <!--  action="#!/responses/view" -->
 			<fieldset>
-				   <input type="hidden"  name="surveyId" data-ng-model="survey._id" data-ng-bind="survey._id" id="surveyId" class="form-control" >
+				   <input type="hidden"   data-ng-model="surveyId" name="surveyId" value="{{survey._id}}" data-ng-bind="survey._id" id="surveyId" class="form-control" >
+               
                 <div>
                     <h3 data-ng-bind="survey.question1"></h3>
-                    <input type="hidden"  name="question1" data-ng-model="survey.question1" data-ng-bind="survey.question1" id="question1" class="form-control" >
+                    <input type="hidden"   data-ng-model="question1" name="question1" value="{{survey.question1}}" data-ng-bind="survey.question1" id="question1" class="form-control" >
                 </div>
                 <div class="radio">
-                    <input type="radio" name="answers" value="a"><p data-ng-bind="survey.answers1a"></p><br/>
-                    <input type="radio" name="answers" value="b"><p data-ng-bind="survey.answers1b" ></p><br/>
-                    <input type="radio" name="answers" value="c"><p data-ng-bind="survey.answers1c" ></p><br/>
-                    <input type="radio" name="answers" value="d"><p data-ng-bind="survey.answers1d" ></p><br/>
+                    <input type="radio"  data-ng-model="answers" id="answersA" name="answers" value="a"><p data-ng-bind="survey.answers1a"></p><br/>
+                    <input type="radio"  data-ng-model="answers" id="answersB" name="answers" value="b"><p data-ng-bind="survey.answers1b" ></p><br/>
+                    <input type="radio"  data-ng-model="answers" id="answersC" name="answers" value="c"><p data-ng-bind="survey.answers1c" ></p><br/>
+                    <input type="radio"  data-ng-model="answers" id="answersD" name="answers" value="d"><p data-ng-bind="survey.answers1d" ></p><br/>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Submit Answers" class="btn btn-default">

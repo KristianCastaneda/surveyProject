@@ -9,10 +9,9 @@ angular.module('responses').controller('ResponsesController', ['$scope', '$state
 		$scope.create = function() {
 			// Create new Response object
 			var response = new Responses ({
-				surveyID: this.surveyId,
-				question1: this.question1,
-				answers: this.answer,
-				name: this.name
+				surveyID: $scope.survey._id,
+				question1: $scope.survey.question1,
+				answers: this.answers
 			});
 
 			// Redirect after save
