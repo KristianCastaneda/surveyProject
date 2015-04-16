@@ -48,7 +48,6 @@ angular.module('surveys').controller('SurveysController', ['$scope', '$statePara
 		// Update existing Survey
 		$scope.update = function() {
 			var survey = $scope.survey;
-
 			survey.$update(function() {
 				$location.path('surveys/' + survey._id);
 			}, function(errorResponse) {
@@ -57,7 +56,7 @@ angular.module('surveys').controller('SurveysController', ['$scope', '$statePara
 		};
 
 		// Find a list of Surveys
-		$scope.find = function() {
+		$scope.findAll = function() {
 			$scope.surveys = Surveys.query();
 		};
 

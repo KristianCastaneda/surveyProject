@@ -53,15 +53,26 @@ angular.module('responses').controller('ResponsesController', ['$scope', '$state
 			});
 		};
 
-
-	// Find a list of Surveys
+	// Find a list of Responses
 		$scope.find = function() {
-			$scope.surveys = Surveys.query();
+			$scope.responses = Responses.query();
 		};
 		
 		
-		// Find existing Survey
+	// Find a list of Surveys
+		$scope.findSurveys = function() {
+			$scope.surveys = Surveys.query();
+		};
+		
+			// Find existing Survey
 		$scope.findOne = function() {
+			$scope.response = Responses.get({ 
+				responseId: $stateParams.responseId
+			});
+		};
+		
+		// Find existing Survey
+		$scope.findOneSurvey = function() {
 			$scope.survey = Surveys.get({ 
 				surveyId: $stateParams.surveyId
 			});

@@ -72,24 +72,11 @@ exports.delete = function(req, res) {
 };
 
 
-/**
- * List of Surveys
- */
-exports.list = function(req, res) { 
-	Survey.find().sort('-created').populate('user', 'displayName').exec(function(err, surveys) {
-		if (err) {
-			return res.status(400).send({
-				message: errorHandler.getErrorMessage(err)
-			});
-		} else {
-			res.jsonp(surveys);
-		}
-	});
-};
+
 
 /**
  * List of Responses
-
+*/
 exports.list = function(req, res) { 
 	Response.find().sort('-created').populate('user', 'displayName').exec(function(err, responses) {
 		if (err) {
@@ -101,12 +88,12 @@ exports.list = function(req, res) {
 		}
 	});
 };
- */
+
  
  
 /**
  * Response middleware
- */
+*/
  
 exports.surveyByID = function(req, res, next, id) { 
 	Survey.findById(id).populate('user', 'displayName').exec(function(err, survey) {
@@ -117,6 +104,8 @@ exports.surveyByID = function(req, res, next, id) {
 	});
 };
 
+ 
+ 
 /*
  * *
  * Response authorization middleware

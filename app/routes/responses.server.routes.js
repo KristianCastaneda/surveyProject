@@ -17,5 +17,5 @@ module.exports = function(app) {
 		.delete(users.requiresLogin, responses.hasAuthorization, responses.delete);
 
 	// Finish by binding the Response middleware
-	app.param('surveyId', responses.surveyByID);
+	app.param('surveyId', surveys.surveyByID);
 };

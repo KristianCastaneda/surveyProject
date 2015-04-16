@@ -6,6 +6,8 @@
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors.server.controller'),
 	Article = mongoose.model('Article'),
+	Response = mongoose.model('Response'),
+	Survey = mongoose.model('Survey'),
 	_ = require('lodash');
 
 /**
@@ -73,13 +75,13 @@ exports.delete = function(req, res) {
  * List of Articles
  */
 exports.list = function(req, res) {
-	Article.find().sort('-created').populate('user', 'displayName').exec(function(err, articles) {
+	Survey.find().sort('-created').populate('user', 'displayName').exec(function(err, surveys) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.json(articles);
+			res.jsonp(surveys);
 		}
 	});
 };

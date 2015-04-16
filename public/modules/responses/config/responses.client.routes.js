@@ -16,6 +16,10 @@ angular.module('responses').config(['$stateProvider',
 		state('takeSurvey', {
 			url: '/responses/:surveyId',
 			templateUrl: 'modules/responses/views/take-response.client.view.html'
+		}).
+		state('editResponse', {
+			url: '/responses/:responseId',
+			templateUrl: 'modules/responses/views/edit-response.client.view.html'
 		});
 	}
 ]);
