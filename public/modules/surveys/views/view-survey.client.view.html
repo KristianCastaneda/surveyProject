@@ -1,5 +1,10 @@
 <section data-ng-controller="SurveysController" data-ng-init="findOne()" data-ng-show="((authentication.user) && (authentication.user._id == survey.user._id))">
-	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == survey.user._id))">
+
+    <form class="form-horizontal"  data-ng-submit="createResponse()" action="newPage" novalidate>
+    	<div class="page-header">
+		<h1  data-ng-bind="survey.title"></h1>
+	</div>
+		<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == survey.user._id))">
 		<a class="btn btn-primary" href="/#!/surveys/{{survey._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>
@@ -7,11 +12,11 @@
 			<i class="glyphicon glyphicon-trash"></i>
 		</a>
 	</div>
-    <form class="form-horizontal"  data-ng-submit="createResponse()" action="newPage" novalidate>
-    	<div class="page-header">
-		<h1  data-ng-bind="survey.title"></h1>
-	</div>
-	 <label class="control-label" for="question1" >Question 1</label>
+	<br/>
+		<br/>
+		 <label class="control-label" for="question1" >Status: </label>
+	   <label data-ng-model="survey.active" data-ng-bind="survey.active" class="form-control" ></label>
+		 <label class="control-label" for="question1" >Question 1</label>
 
     <label data-ng-bind="survey.question1" class="form-control" ></label>
     <div class="radio">
@@ -20,6 +25,45 @@
         <input type="radio" disabled name="answers" value="c"><p> {{survey.answers1c}}</p><br/>
         <input type="radio" disabled name="answers" value="d"><p> {{survey.answers1d}}</p><br/>
     </div>
+
+     <label class="control-label" for="question2" >Question 2</label>
+
+    <label data-ng-bind="survey.question2" class="form-control" ></label>
+    <div class="radio">
+        <input type="radio" disabled name="answers2" value="a"><p> {{survey.answers2a}}</p><br/>
+        <input type="radio" disabled name="answers2" value="b"><p> {{survey.answers2b}}</p><br/>
+        <input type="radio" disabled name="answers2" value="c"><p> {{survey.answers2c}}</p><br/>
+        <input type="radio" disabled name="answers2" value="d"><p> {{survey.answers2d}}</p><br/>
+    </div>
+     <label class="control-label" for="question3" >Question 3</label>
+
+    <label data-ng-bind="survey.question3" class="form-control" ></label>
+    <div class="radio">
+        <input type="radio" disabled name="answers3" value="a"><p> {{survey.answers3a}}</p><br/>
+        <input type="radio" disabled name="answers3" value="b"><p> {{survey.answers3b}}</p><br/>
+        <input type="radio" disabled name="answers3" value="c"><p> {{survey.answers3c}}</p><br/>
+        <input type="radio" disabled name="answers3" value="d"><p> {{survey.answers3d}}</p><br/>
+    </div>
+     <label class="control-label" for="question4" >Question 4</label>
+
+    <label data-ng-bind="survey.question4" class="form-control" ></label>
+    <div class="radio">
+        <input type="radio" disabled name="answers4" value="a"><p> {{survey.answers4a}}</p><br/>
+        <input type="radio" disabled name="answers4" value="b"><p> {{survey.answers4b}}</p><br/>
+        <input type="radio" disabled name="answers4" value="c"><p> {{survey.answers4c}}</p><br/>
+        <input type="radio" disabled name="answers4" value="d"><p> {{survey.answers4d}}</p><br/>
+    </div>
+     <label class="control-label" for="question5" >Question 5</label>
+
+    <label data-ng-bind="survey.question5" class="form-control" ></label>
+    <div class="radio">
+        <input type="radio" disabled name="answers5" value="a"><p> {{survey.answers5a}}</p><br/>
+        <input type="radio" disabled name="answers5" value="b"><p> {{survey.answers5b}}</p><br/>
+        <input type="radio" disabled name="answers5" value="c"><p> {{survey.answers5c}}</p><br/>
+        <input type="radio" disabled name="answers5" value="d"><p> {{survey.answers5d}}</p><br/>
+    </div>
+    
+
 </form>
 
 	<small>

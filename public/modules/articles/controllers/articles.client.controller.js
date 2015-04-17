@@ -46,32 +46,7 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 		};
 
 		$scope.findTakenSurveys = function() {
-	
-			var surveys = Responses.query();
-			var responsesOuter = Responses.query();
-			var responsesInner = Responses.query();
-			
-			var uniqResponses =[];
-			var numberOfUniqueResponses=0;
-			var survID='ppp';
-			var readingCode;
-			var parseTry = responsesOuter.parse();
-					var lengthOuter = parseTry.length;
-			var lengthOuter1 = responsesOuter.douments.length;
-			for (var i = 0; i < responsesOuter.length; i++) {
- 				 survID = responsesOuter[i].surveyID;
- 				 readingCode = 'read this code';
- 				for (var j = 0; j <responsesInner.length; j++) {
- 					if(survID === responsesInner[j].surveyID)
- 					{
- 						numberOfUniqueResponses++;
- 					}
-				}
-			}
-			
-                
-            $scope.articles = Responses.query() ;
-			$scope.numberOfUniqueResponses=lengthOuter;
+	            $scope.articles = Responses.query() ;
 		};
 
 		$scope.findOne = function() {

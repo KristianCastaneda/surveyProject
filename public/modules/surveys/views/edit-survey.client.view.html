@@ -10,6 +10,11 @@
                     <div class="controls">
                         <input type="text" data-ng-model="survey.title" id="title" class="form-control" placeholder="Title" required>
                     </div>
+                    <div class="radio" >
+                        <input type="radio" data-ng-model="survey.active" id="active" name="active" value="true" >Active
+                        <br />
+                        <input type="radio" data-ng-model="survey.active" id="inactive" name="active" value="false" >Inactive
+                    </div>
                     <label class="control-label" for="question1" >Question 1</label>
                     <textarea type="text" data-ng-model="survey.question1" id="question1" class="form-control" required ></textarea>
                     <div class="radio">
@@ -18,6 +23,41 @@
                         <input type="radio" disabled name="answers"><input type="text" data-ng-model="survey.answers1c"><br/>
                         <input type="radio" disabled name="answers"><input type="text" data-ng-model="survey.answers1d">
                     </div>
+               
+                    <label class="control-label" for="question2" >Question 2</label>
+                    <textarea type="text" data-ng-model="survey.question2" id="question2" class="form-control" required ></textarea>
+                    <div class="radio">
+                        <input type="radio" disabled name="answers2"><input type="text" data-ng-model="survey.answers2a"><br/>
+                        <input type="radio" disabled name="answers2"><input type="text" data-ng-model="survey.answers2b"><br/>
+                        <input type="radio" disabled name="answers2"><input type="text" data-ng-model="survey.answers2c"><br/>
+                        <input type="radio" disabled name="answers2"><input type="text" data-ng-model="survey.answers2d">
+                    </div>
+                    <label class="control-label" for="question3" >Question 3</label>
+                    <textarea type="text" data-ng-model="survey.question3" id="question3" class="form-control" required ></textarea>
+                    <div class="radio">
+                        <input type="radio" disabled name="answers3"><input type="text" data-ng-model="survey.answers3a"><br/>
+                        <input type="radio" disabled name="answers3"><input type="text" data-ng-model="survey.answers3b"><br/>
+                        <input type="radio" disabled name="answers3"><input type="text" data-ng-model="survey.answers3c"><br/>
+                        <input type="radio" disabled name="answers3"><input type="text" data-ng-model="survey.answers3d">
+                    </div>
+                    <label class="control-label" for="question4" >Question 4</label>
+                    <textarea type="text" data-ng-model="survey.question4" id="question4" class="form-control" required ></textarea>
+                    <div class="radio">
+                        <input type="radio" disabled name="answers4"><input type="text" data-ng-model="survey.answers4a"><br/>
+                        <input type="radio" disabled name="answers4"><input type="text" data-ng-model="survey.answers4b"><br/>
+                        <input type="radio" disabled name="answers4"><input type="text" data-ng-model="survey.answers4c"><br/>
+                        <input type="radio" disabled name="answers4"><input type="text" data-ng-model="survey.answers4d">
+                    </div>
+                    <label class="control-label" for="question5" >Question 5</label>
+                    <textarea type="text" data-ng-model="survey.question5" id="question5" class="form-control" required ></textarea>
+                    <div class="radio">
+                        <input type="radio" disabled name="answers5"><input type="text" data-ng-model="survey.answers5a"><br/>
+                        <input type="radio" disabled name="answers5"><input type="text" data-ng-model="survey.answers5b"><br/>
+                        <input type="radio" disabled name="answers5"><input type="text" data-ng-model="survey.answers5c"><br/>
+                        <input type="radio" disabled name="answers5"><input type="text" data-ng-model="survey.answers5d">
+                    </div>
+                    
+
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Update" class="btn btn-default">

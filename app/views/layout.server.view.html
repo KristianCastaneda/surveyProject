@@ -45,11 +45,18 @@
 
 <body class="ng-cloak">
 	<header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
+
 	<section class="content">
+			<div id="logo">
+                 <center>
+                    <a href="/#!/" ><img class="img-responsive text-center" src="modules/core/img/brand/logo.png"></a>
+                 </center>
+               </div>
 		<section class="container">
 			{% block content %}{% endblock %}
 		</section>
 	</section>
+	
 
 	<!--Embedding The User Object-->
 	<script type="text/javascript">
@@ -64,5 +71,5 @@
 	<script type="text/javascript" src="http://{{request.hostname}}:35729/livereload.js"></script>
 	{% endif %}
 </body>
-
+<footer class="container"><h6><center>&copy;Copyright 2015 - COMP308 - Mohammed Sumon, Liliya Artyukh, Kristian Castaneda</center></h6></footer>
 </html>

@@ -35,6 +35,16 @@ html,body{
   background-image: linear-gradient(to bottom, #40a1eb, #14ffe0);
   text-decoration: none;
 }
+
+.signinbuttons{
+  width:200px;
+}
+#logo{
+  width:150px;
+  height:75px;
+  padding-top:15px;
+  margin:0 auto;
+}
 .page-header{
 	background-color: #f6f6f6;
     opacity:0.5;

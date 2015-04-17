@@ -3,12 +3,14 @@
 		<h1 data-ng-bind="survey.title"></h1>
 	</div>
 	<div class="col-md-12">
-		<form name="answersForm" class="form-horizontal"  data-ng-submit="create()" > <!--  action="#!/responses/view" -->
+		<form name="answersForm" class="form-horizontal"   data-ng-submit="create()" > <!-- action="#!/responses/view" > -->
 			<fieldset>
-				   <input type="hidden"   data-ng-model="surveyId" name="surveyId" value="{{survey._id}}" data-ng-bind="survey._id" id="surveyId" class="form-control" >
-               
+			        <input type="hidden"   data-ng-model="surveyId" name="surveyId" value="{{survey._id}}" data-ng-bind="survey._id" id="surveyId" class="form-control" >
                 <div>
-                    <h3 data-ng-bind="survey.question1"></h3>
+                    <input type="hidden"   data-ng-model="title" name="title" value="{{survey.title}}" data-ng-bind="survey.title" id="title" class="form-control" >
+                </div>
+                <div>
+                     <h3 data-ng-bind="survey.question1"></h3>
                     <input type="hidden"   data-ng-model="question1" name="question1" value="{{survey.question1}}" data-ng-bind="survey.question1" id="question1" class="form-control" >
                 </div>
                 <div class="radio">
@@ -17,6 +19,49 @@
                     <input type="radio"  data-ng-model="answers" id="answersC" name="answers" value="c"><p data-ng-bind="survey.answers1c" ></p><br/>
                     <input type="radio"  data-ng-model="answers" id="answersD" name="answers" value="d"><p data-ng-bind="survey.answers1d" ></p><br/>
                 </div>
+                
+         
+                <div>
+                     <h3 data-ng-bind="survey.question2"></h3>
+                    <input type="hidden"   data-ng-model="question2" name="question2" value="{{survey.question2}}" data-ng-bind="survey.question2" id="question2" class="form-control" >
+                </div>
+                <div class="radio">
+                    <input type="radio"  data-ng-model="answers2" id="answers2A" name="answers2" value="a"><p data-ng-bind="survey.answers2a"></p><br/>
+                    <input type="radio"  data-ng-model="answers2" id="answers2B" name="answers2" value="b"><p data-ng-bind="survey.answers2b" ></p><br/>
+                    <input type="radio"  data-ng-model="answers2" id="answers2C" name="answers2" value="c"><p data-ng-bind="survey.answers2c" ></p><br/>
+                    <input type="radio"  data-ng-model="answers2" id="answers2D" name="answers2" value="d"><p data-ng-bind="survey.answers2d" ></p><br/>
+                </div>
+                <div>
+                     <h3 data-ng-bind="survey.question3"></h3>
+                    <input type="hidden"   data-ng-model="question3" name="question3" value="{{survey.question3}}" data-ng-bind="survey.question3" id="question3" class="form-control" >
+                </div>
+                <div class="radio">
+                    <input type="radio"  data-ng-model="answers3" id="answers3A" name="answers3" value="a"><p data-ng-bind="survey.answers3a"></p><br/>
+                    <input type="radio"  data-ng-model="answers3" id="answers3B" name="answers3" value="b"><p data-ng-bind="survey.answers3b" ></p><br/>
+                    <input type="radio"  data-ng-model="answers3" id="answers3C" name="answers3" value="c"><p data-ng-bind="survey.answers3c" ></p><br/>
+                    <input type="radio"  data-ng-model="answers3" id="answers3D" name="answers3" value="d"><p data-ng-bind="survey.answers3d" ></p><br/>
+                </div>
+                <div>
+                     <h3 data-ng-bind="survey.question4"></h3>
+                    <input type="hidden"   data-ng-model="question4" name="question4" value="{{survey.question4}}" data-ng-bind="survey.question4" id="question4" class="form-control" >
+                </div>
+                <div class="radio">
+                    <input type="radio"  data-ng-model="answers4" id="answers4A" name="answers4" value="a"><p data-ng-bind="survey.answers4a"></p><br/>
+                    <input type="radio"  data-ng-model="answers4" id="answers4B" name="answers4" value="b"><p data-ng-bind="survey.answers4b" ></p><br/>
+                    <input type="radio"  data-ng-model="answers4" id="answers4C" name="answers4" value="c"><p data-ng-bind="survey.answers4c" ></p><br/>
+                    <input type="radio"  data-ng-model="answers4" id="answers4D" name="answers4" value="d"><p data-ng-bind="survey.answers4d" ></p><br/>
+                </div>
+                <div>
+                     <h3 data-ng-bind="survey.question5"></h3>
+                    <input type="hidden"   data-ng-model="question5" name="question5" value="{{survey.question5}}" data-ng-bind="survey.question5" id="question5" class="form-control" >
+                </div>
+                <div class="radio">
+                    <input type="radio"  data-ng-model="answers5" id="answers5A" name="answers5" value="a"><p data-ng-bind="survey.answers5a"></p><br/>
+                    <input type="radio"  data-ng-model="answers5" id="answers5B" name="answers5" value="b"><p data-ng-bind="survey.answers5b" ></p><br/>
+                    <input type="radio"  data-ng-model="answers5" id="answers5C" name="answers5" value="c"><p data-ng-bind="survey.answers5c" ></p><br/>
+                    <input type="radio"  data-ng-model="answers5" id="answers5D" name="answers5" value="d"><p data-ng-bind="survey.answers5d" ></p><br/>
+                </div>
+           
                 <div class="form-group">
                     <input type="submit" value="Submit Answers" class="btn btn-default">
                 </div>

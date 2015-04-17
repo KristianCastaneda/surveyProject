@@ -10,8 +10,18 @@ angular.module('responses').controller('ResponsesController', ['$scope', '$state
 			// Create new Response object
 			var response = new Responses ({
 				surveyID: $scope.survey._id,
+				title: $scope.survey.title,
 				question1: $scope.survey.question1,
 				answers: this.answers
+				,
+				question2: $scope.survey.question2,
+				answers2: this.answers2,
+				question3: $scope.survey.question3,
+				answers3: this.answers3,
+				question4: $scope.survey.question4,
+				answers4: this.answers4,
+				question5: $scope.survey.question5,
+				answers5: this.answers5
 			});
 
 			// Redirect after save
@@ -25,6 +35,16 @@ angular.module('responses').controller('ResponsesController', ['$scope', '$state
 			});
 		};
 
+
+    $scope.isActive = function(survey) {
+    	var surveys = $scope.surveys;
+        for(var i=0; i < surveys.length; i++){
+            return surveys[0].active === "true";    
+        }
+
+    };
+    
+    
 		// Remove existing Response
 		$scope.remove = function(response) {
 			if ( response ) { 

@@ -9,11 +9,23 @@ angular.module('surveys').controller('SurveysController', ['$scope', '$statePara
 		$scope.create = function() {
 			// Create new Survey object
 			var survey = new Surveys ({
+				isTaken: $scope.isTaken,
+				active: this.active,
 				title: this.title,
                 desc: this.desc,
                 expiryDate: this.expiryDate,
                 question1: this.question1,
+                question2: this.question2,
+                question3: this.question3,
+                question4: this.question4,
+                question5: this.question5,
                 answers1a:this.answers1a,answers1b:this.answers1b,answers1c:this.answers1c,answers1d:this.answers1d
+                ,
+                answers2a:this.answers2a,answers2b:this.answers2b,answers2c:this.answers2c,answers2d:this.answers2d,
+                answers3a:this.answers3a,answers3b:this.answers3b,answers3c:this.answers3c,answers3d:this.answers3d,
+                answers4a:this.answers4a,answers4b:this.answers4b,answers4c:this.answers4c,answers4d:this.answers4d,
+                answers5a:this.answers5a,answers5b:this.answers5b,answers5c:this.answers5c,answers5d:this.answers5d,
+    
 			});
 
 			// Redirect after save

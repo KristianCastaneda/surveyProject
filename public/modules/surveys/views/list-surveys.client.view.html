@@ -5,9 +5,10 @@
     <div class="list-group">
         		<p data-ng-hide="(surveys.length !== 0)">You do not have any surveys yet.</p>
 		
-        <a data-ng-repeat="survey in surveys" data-ng-href="#!/surveys/{{survey._id}}" class="list-group-item" data-ng-show="((authentication.user) && (authentication.user._id == survey.user._id))">
+        <a data-ng-repeat="survey in surveys  | orderBy : 'title' " data-ng-href="#!/surveys/{{survey._id}}" class="list-group-item" data-ng-show="((authentication.user) && (authentication.user._id == survey.user._id))">
 			<h4 class="list-group-item-heading" data-ng-bind="survey.title"></h4>
         </a>
+        	<h4 class="list-group-item-heading" data-ng-bind="survey.active"></h4>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!surveys.$resolved || surveys.length">
     	No Surveys yet, why don't you <a href="/#!/surveys/create">create one</a>?
