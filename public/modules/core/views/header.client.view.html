@@ -1,3 +1,11 @@
+<!-- 
+/*
+File name:  header.client.view.html,
+Authors’ Names: Liliya Artyukh, Mohammed Summon, Kristian Castaneda,
+Website Name: Survey KLM,
+File Description: header for each view
+*/
+-->
 <div class="container" data-ng-controller="HeaderController">
 	<div class="navbar-header">
 		<button class="navbar-toggle" type="button" data-ng-click="toggleCollapsibleMenu()">
@@ -43,9 +51,7 @@
 					<li>
 						<a href="/#!/settings/profile">Edit Profile</a>
 					</li>
-					<li>
-						<a href="/#!/settings/accounts">Manage Social Accounts</a>
-					</li>
+
 					<li data-ng-show="authentication.user.provider === 'local'">
 						<a href="/#!/settings/password">Change Password</a>
 					</li>

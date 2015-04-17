@@ -1,5 +1,15 @@
 'use strict';
 
+
+/*
+File name:  header.client.view.html,
+Authors’ Names: Liliya Artyukh, Mohammed Summon, Kristian Castaneda,
+Website Name: Survey KLM,
+File Description: header for each view
+*/
+
+
+
 //Setting up route
 angular.module('surveys').config(['$stateProvider',
 	function($stateProvider) {

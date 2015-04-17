@@ -1,3 +1,12 @@
+<!-- 
+/*
+File name:  view.survey.client.html,
+Authors’ Names: Liliya Artyukh, Mohammed Summon, Kristian Castaneda,
+Website Name: Survey KLM,
+File Description: view page for surveys
+*/
+-->
+
 <section data-ng-controller="SurveysController" data-ng-init="findOne()" data-ng-show="((authentication.user) && (authentication.user._id == survey.user._id))">
 
     <form class="form-horizontal"  data-ng-submit="createResponse()" action="newPage" novalidate>

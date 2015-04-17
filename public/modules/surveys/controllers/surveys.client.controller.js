@@ -1,5 +1,12 @@
 'use strict';
 
+/*
+File name:  surveys.client.controller.js,
+Authors’ Names: Liliya Artyukh, Mohammed Summon, Kristian Castaneda,
+Website Name: Survey KLM,
+File Description: controller to control surveys
+*/
+
 // Surveys controller
 angular.module('surveys').controller('SurveysController', ['$scope', '$stateParams', '$location', 'Authentication', 'Surveys',
 	function($scope, $stateParams, $location, Authentication, Surveys) {

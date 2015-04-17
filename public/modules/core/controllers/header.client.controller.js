@@ -1,4 +1,11 @@
 'use strict';
+ 
+/*
+File name:  header.client.controller.js,
+Authors’ Names: Liliya Artyukh, Mohammed Summon, Kristian Castaneda,
+Website Name: Survey KLM,
+File Description: controller for header
+*/
 
 angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus',
 	function($scope, Authentication, Menus) {

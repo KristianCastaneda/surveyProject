@@ -1,3 +1,12 @@
+<!--
+/*
+File name:  list-articles.client.view.html,
+Authors’ Names: Liliya Artyukh, Mohammed Summon, Kristian Castaneda,
+Website Name: Survey KLM,
+File Description: displays list of the surveys taken
+*/
+-->
+
 <section data-ng-controller="ArticlesController" data-ng-init="findTakenSurveys();increment=1; answerA=0;answerB=0;answerC=0;answerD=0">
     <div class="page-header">
         <h1>Reports</h1>
@@ -6,17 +15,17 @@
         		<p data-ng-hide="(articles.length !== 0)">You do not have any surveys yet.</p>
 		
         <a data-ng-repeat="article in articles  | orderBy : 'title'" data-ng-href="#!/articles/{{survey._id}}" class="list-group-item" data-ng-show="((authentication.user) && (authentication.user._id == article.user._id))">
-			<h4 class="list-group-item-heading" data-ng-bind="article.title"></h4>
+			<h3 class="list-group-item-heading" data-ng-bind="article.title"></h3>
 			<h4 class="list-group-item-heading" data-ng-bind="article.question1"></h4>
-			<h4 class="list-group-item-heading" data-ng-bind="article.answers"></h4>
+			<h5 class="list-group-item-heading" data-ng-bind="article.answers"></h5>
 			<h4 class="list-group-item-heading" data-ng-bind="article.question2"></h4>
-			<h4 class="list-group-item-heading" data-ng-bind="article.answers2"></h4>
+			<h5 class="list-group-item-heading" data-ng-bind="article.answers2"></h5>
 			<h4 class="list-group-item-heading" data-ng-bind="article.question3"></h4>
-			<h4 class="list-group-item-heading" data-ng-bind="article.answers3"></h4>
+			<h5 class="list-group-item-heading" data-ng-bind="article.answers3"></h5>
 			<h4 class="list-group-item-heading" data-ng-bind="article.question4"></h4>
-			<h4 class="list-group-item-heading" data-ng-bind="article.answers4"></h4>
+			<h5 class="list-group-item-heading" data-ng-bind="article.answers4"></h5>
 			<h4 class="list-group-item-heading" data-ng-bind="article.question5"></h4>
-			<h4 class="list-group-item-heading" data-ng-bind="article.answers5"></h4>
+			<h5 class="list-group-item-heading" data-ng-bind="article.answers5"></h5>
 
 			
         </a>

@@ -1,5 +1,14 @@
 'use strict';
 
+
+/*
+File name:  core.client.routes.js,
+Authors’ Names: Liliya Artyukh, Mohammed Summon, Kristian Castaneda,
+Website Name: Survey KLM,
+File Description: routes for core module
+*/
+
+
 // Setting up route
 angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 	function($stateProvider, $urlRouterProvider) {
